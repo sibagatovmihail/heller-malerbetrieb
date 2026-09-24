@@ -13,6 +13,7 @@
   var st = T.state;
   var HARMONY = { free: null, complement: 180, analog: 30, triad: 120, split: 150 };
   var PRESETS = [
+    { n: 'Weinrot & Terrakotta (Logo)', b: [357, 55, 24], a: [18, 58, 52],  g: 'accent' },
     { n: 'Ultramarin & Mennige',  b: [222, 55, 28], a: [14, 78, 52],  g: 'linen' },
     { n: 'Tanne & Ocker',         b: [158, 40, 22], a: [40, 78, 50],  g: 'linen' },
     { n: 'Anthrazit & Signalgelb', b: [212, 14, 20], a: [45, 95, 52], g: 'neutral' },
@@ -380,7 +381,7 @@
       s._paint();
     });
 
-    paneC.querySelectorAll('[data-set] .t-chip').forEach(function (b) {
+    panel.querySelectorAll('[data-set] .t-chip').forEach(function (b) {
       var key = b.parentNode.dataset.set;
       b.setAttribute('aria-pressed', st[key] === b.dataset.value ? 'true' : 'false');
     });

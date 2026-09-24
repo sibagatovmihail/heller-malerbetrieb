@@ -14,14 +14,14 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="author" content="Mykhailo Sibahatov">
   <meta name="copyright" content="Designentwurf und Code © 2026 Mykhailo Sibahatov. Alle Rechte vorbehalten.">
-  <meta name="theme-color" content="#FFFFFF">
+  <meta name="theme-color" content="#351314">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=1">
-  <link rel="stylesheet" href="css/tuner.css?v=1">
+  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/tuner.css?v=3">
   <script>document.documentElement.classList.add('js');</script>
-  <script src="js/tuner-boot.js?v=1"></script>
+  <script src="js/tuner-boot.js?v=3"></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,36 +53,42 @@
 
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
-  <!-- ============ Header: one continuous strip ============ -->
+  <!-- ============ Header: top bar + nav bar (logo · links · CTA) ============ -->
   <header class="site-header">
-    <nav class="strip" data-open="false" aria-label="Hauptnavigation">
-      <div class="strip__bar">
-        <a class="brand" href="#top" aria-label="Malermeister Jörg Heller, zur Startseite">
-          <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
-            <rect class="mark__tile" width="48" height="48" rx="10"/>
-            <path class="mark__bars" d="M14 11.5h5.2v25H14zM28.8 11.5H34v25h-5.2z"/>
-            <path class="mark__stroke" d="M9.6 25.9c4.8-1.6 12-2.6 19.9-2.4 3.4.1 6.4.5 8.9 1l.2 3.7c-2.6-.6-5.7-.9-9.1-1-7.5-.2-14.5.6-19.3 2Z"/>
-          </svg>
-          <span class="brand__word"><span class="brand__name">Heller</span><span class="brand__sub">Malermeister · Pasewalk</span></span>
-        </a>
-        <div class="strip__quick">
-          <a class="btn btn--tile strip__call" href="tel:+493973213024" aria-label="Anrufen: 03973 213024"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
-          <button class="strip__toggle" type="button" aria-expanded="false" aria-controls="strip-menu">
-            <span></span><span></span><span class="visually-hidden">Menü öffnen</span>
-          </button>
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <p class="topbar__text"><svg aria-hidden="true"><use href="#i-pin"/></svg><span class="topbar__long">Meisterbetrieb für Pasewalk und Umgebung</span><span class="topbar__short">Meisterbetrieb · Pasewalk</span></p>
+        <div class="topbar__links">
+          <a class="topbar__mail" href="mailto:sj.heller10@web.de"><svg aria-hidden="true"><use href="#i-mail"/></svg>sj.heller10@web.de</a>
+          <a href="tel:+493973213024"><svg aria-hidden="true"><use href="#i-phone"/></svg>03973 213024</a>
         </div>
       </div>
-      <div class="strip__menu" id="strip-menu">
-        <ul class="strip__links">
-          <li><a class="strip__link" href="#leistungen">Leistungen<svg class="strip__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-          <li><a class="strip__link" href="#ablauf">Ablauf<svg class="strip__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-          <li><a class="strip__link" href="#betrieb">Betrieb<svg class="strip__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-          <li><a class="strip__link" href="#ausbildung">Ausbildung<svg class="strip__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-          <li><a class="strip__link" href="#fragen">Fragen<svg class="strip__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
-        </ul>
-        <div class="strip__cta">
-          <a class="btn btn--brand" href="#kontakt">Angebot anfragen</a>
-          <a class="btn btn--tile" href="tel:+493973213024" aria-label="Anrufen: 03973 213024"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+    </div>
+    <nav class="navbar" data-open="false" aria-label="Hauptnavigation">
+      <div class="container navbar__inner">
+        <a class="brand" href="#top" aria-label="Zur Startseite">
+          <img class="brand__logo" src="assets/logo.svg?v=1" width="510" height="180" alt="Jörg Heller, Maler- und Lackierermeister">
+        </a>
+
+        <div class="navbar__menu" id="nav-menu">
+          <ul class="navbar__links">
+            <li><a class="navbar__link" href="#leistungen">Leistungen<svg class="navbar__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a class="navbar__link" href="#ablauf">Ablauf<svg class="navbar__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a class="navbar__link" href="#betrieb">Über uns<svg class="navbar__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+            <li><a class="navbar__link" href="#fragen">Fragen<svg class="navbar__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+          </ul>
+          <div class="navbar__sheet-cta">
+            <a class="btn btn--brand" href="#kontakt">Angebot anfragen</a>
+            <a class="btn btn--tile" href="tel:+493973213024" aria-label="Anrufen: 03973 213024"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+          </div>
+        </div>
+
+        <div class="navbar__actions">
+          <a class="btn btn--brand navbar__cta" href="#kontakt">Angebot anfragen</a>
+          <a class="btn btn--accent navbar__call" href="tel:+493973213024" aria-label="Anrufen: 03973 213024"><svg aria-hidden="true"><use href="#i-phone"/></svg></a>
+          <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span><span class="visually-hidden">Menü öffnen</span>
+          </button>
         </div>
       </div>
     </nav>
@@ -90,41 +96,52 @@
 
   <main id="main">
 
-    <!-- ============ Hero ============ -->
+    <!-- ============ Hero: text left, a tall photo panel to the right edge,
+         the facts on a paint-sample strip along its side ============ -->
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container hero__container">
-        <div class="hero__grid">
-          <div class="hero__content">
-            <div class="eyebrow"><p>Meisterbetrieb in Pasewalk</p></div>
-            <div class="display"><h1 id="hero-title">Ihr <em>Malermeister</em> für Pasewalk und Umgebung.</h1></div>
-            <div class="lead"><p>Streichen, Lackieren, Tapezieren, Putz und Stuck – ausgeführt vom Meisterbetrieb Jörg Heller. Für Wohnungen, Häuser, Treppenhäuser und Gewerberäume, sauber und fair abgesprochen.</p></div>
-            <div class="hero__actions">
-              <a class="btn btn--brand" href="#kontakt">Angebot anfragen<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-              <a class="btn btn--plain hero__tel" href="tel:+493973213024" aria-label="Anrufen: 03973 213024"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="hero__tel-num">03973 213024</span></a>
-            </div>
+      <div class="hero__grid">
+        <div class="hero__content">
+          <div class="eyebrow"><p>Maler- und Lackierermeister</p></div>
+          <div class="display"><h1 id="hero-title">Ihr <em>Malermeister</em> für Pasewalk und Umgebung.</h1></div>
+          <div class="lead"><p>Streichen, Lackieren, Tapezieren, Putz und Stuck – ausgeführt vom Meisterbetrieb Jörg Heller. Für Wohnungen, Häuser, Treppenhäuser und Gewerberäume, sauber und fair abgesprochen.</p></div>
+          <div class="hero__actions">
+            <a class="btn btn--brand" href="#kontakt">Angebot anfragen<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--plain hero__tel" href="tel:+493973213024" aria-label="Anrufen: 03973 213024"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="hero__tel-num">03973 213024</span></a>
           </div>
-
-          <figure class="hero__media">
-            <img src="assets/img/hero.jpg" width="1600" height="1117" alt="Farbroller trägt blaue Farbe auf eine weiße Wand auf" fetchpriority="high">
-            <figcaption class="photo-tag">Beispielbild</figcaption>
-            <div class="hero__card">
-              <div class="rating">
-                <div class="rating__num"><p>5,0</p></div>
-                <div class="rating__meta">
-                  <div class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
-                  <div class="rating__text"><p>Google-Bewertung · 2 Rezensionen</p></div>
-                </div>
-              </div>
-            </div>
-          </figure>
+          <div class="hero__person">
+            <span class="hero__mono" aria-hidden="true">JH</span>
+            <p><b>Ihr Ansprechpartner: Jörg Heller</b><span>Vom ersten Anruf bis zur Übergabe</span></p>
+          </div>
         </div>
 
-        <ul class="facts reveal" aria-label="Auf einen Blick">
-          <li class="fact"><b>Meister</b><span>Maler- und Lackierer&shy;meister</span></li>
-          <li class="fact"><b>5 Gewerke</b><span>Malen, Lackieren, Tapeten, Putz, Stuck</span></li>
-          <li class="fact"><b>Vor Ort</b><span>Wilhelmstraße 10, Pasewalk</span></li>
-          <li class="fact"><b>Wir bilden aus</b><span>Maler und Lackierer (m/w/d)</span></li>
-        </ul>
+        <div class="hero__visual">
+          <figure class="hero__photo">
+            <img src="assets/img/fassade.jpg" width="1200" height="801" alt="Maler auf einer Leiter streicht eine weiße Hausfassade" fetchpriority="high">
+            <figcaption class="photo-tag">Beispielbild</figcaption>
+          </figure>
+          <ul class="swatch-strip" aria-label="Auf einen Blick">
+            <li class="swatch-strip__band">
+              <span class="swatch-strip__no" aria-hidden="true">01</span>
+              <b>5,0 <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></b>
+              <span>Google-Bewertung (2)</span>
+            </li>
+            <li class="swatch-strip__band">
+              <span class="swatch-strip__no" aria-hidden="true">02</span>
+              <b>Meister&shy;betrieb</b>
+              <span>Maler- und Lackierer&shy;handwerk</span>
+            </li>
+            <li class="swatch-strip__band">
+              <span class="swatch-strip__no" aria-hidden="true">03</span>
+              <b>5 Gewerke</b>
+              <span>aus einer Hand</span>
+            </li>
+            <li class="swatch-strip__band">
+              <span class="swatch-strip__no" aria-hidden="true">04</span>
+              <b>Pasewalk</b>
+              <span>Wilhelmstraße 10</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -236,13 +253,13 @@
     <section class="section" id="betrieb" aria-labelledby="betrieb-title">
       <div class="container betrieb">
         <figure class="betrieb__media">
-          <img src="assets/img/fassade.jpg" width="1200" height="801" alt="Maler auf einer Leiter an einer weißen Hausfassade" loading="lazy">
+          <img src="assets/img/roller.jpg" width="1600" height="1117" alt="Farbroller trägt blaue Farbe auf eine weiße Wand auf" loading="lazy">
           <figcaption class="photo-tag">Beispielbild</figcaption>
           <svg class="seal" viewBox="0 0 120 120" role="img" aria-label="Meisterbetrieb im Maler- und Lackiererhandwerk">
             <circle class="seal__disc" cx="60" cy="60" r="58"/>
             <circle class="seal__ring" cx="60" cy="60" r="51.5"/>
             <defs><path id="seal-arc" d="M60 60m-41 0a41 41 0 1 1 82 0a41 41 0 1 1-82 0"/></defs>
-            <text class="seal__text"><textPath href="#seal-arc" startOffset="0" textLength="252" lengthAdjust="spacing">MALER- UND LACKIERERHANDWERK · PASEWALK · </textPath></text>
+            <text class="seal__text"><textPath href="#seal-arc" startOffset="0" textLength="252" lengthAdjust="spacing">KUNST BRINGT GUNST · MALERMEISTER · PASEWALK · </textPath></text>
             <text class="seal__big" x="60" y="61" text-anchor="middle">Meister</text>
             <text class="seal__small" x="60" y="74" text-anchor="middle">BETRIEB</text>
           </svg>
@@ -251,10 +268,11 @@
         <div class="betrieb__content">
           <div class="section-head">
             <div class="eyebrow"><p>Der Betrieb</p></div>
-            <div class="heading"><h2 id="betrieb-title">Ein Name, der für die Arbeit <em>geradesteht</em>.</h2></div>
+            <div class="heading"><h2 id="betrieb-title">Kunst bringt <em>Gunst</em>.</h2></div>
           </div>
           <div class="prose">
-            <p>Hinter dem Betrieb steht Jörg Heller, Maler- und Lackierermeister aus Pasewalk. Mit dem Meisterbrief ist der Betrieb in die Handwerksrolle eingetragen, darf ausbilden und steht mit seinem Namen für jede Fläche, die er übergibt.</p>
+            <p>So lautet der alte Wahlspruch der Malerzunft, und er steht auch im Logo von Jörg Heller, zusammen mit dem Zunftwappen der Maler. Gute Arbeit spricht sich herum.</p>
+            <p>Hinter dem Betrieb steht Jörg Heller, Maler- und Lackierermeister aus Pasewalk. Mit dem Meisterbrief ist der Betrieb in die Handwerksrolle eingetragen und steht mit seinem Namen für jede Fläche, die er übergibt.</p>
             <p>Sie haben einen festen Ansprechpartner: vom ersten Anruf über das Angebot bis zur Abnahme.</p>
           </div>
           <ul class="promises">
@@ -271,26 +289,18 @@
       </div>
     </section>
 
-    <!-- ============ Ausbildung ============ -->
-    <section class="section section--night" id="ausbildung" aria-labelledby="ausbildung-title">
-      <div class="container ausbildung">
-        <div class="ausbildung__main">
-          <div class="section-head">
-            <div class="eyebrow"><p>Wir bilden aus</p></div>
-            <div class="heading"><h2 id="ausbildung-title">Lust auf <em>Farbe</em> als Beruf?</h2></div>
-            <div class="lead"><p>Maler und Lackierer ist ein Handwerk mit Zukunft: jeden Tag eine andere Baustelle, am Abend sieht man, was man geschafft hat. Und danach stehen viele Wege offen, bis zum eigenen Meisterbrief.</p></div>
-          </div>
-          <div class="ausbildung__actions">
-            <a class="btn btn--light" href="tel:+4915111626908"><svg aria-hidden="true"><use href="#i-phone"/></svg>0151 11626908</a>
-            <a class="btn btn--ghost" href="mailto:sj.heller10@web.de?subject=Ausbildung%20Maler%20und%20Lackierer"><svg aria-hidden="true"><use href="#i-mail"/></svg>Per E-Mail melden</a>
-          </div>
-          <div class="ausbildung__note"><p>Einfach anrufen oder schreiben, auch für ein Praktikum. Den Betrieb finden Sie auch bei <a href="https://www.deine-zukunft-ist-bunt.de/betrieb/joerg-heller-maler-und-lackierermeister-pasewalk/" target="_blank" rel="noopener">„Deine Zukunft ist bunt“</a>, dem Ausbildungsportal des Malerhandwerks.</p></div>
+    <!-- ============ Call band ============ -->
+    <section class="section section--night callband" aria-labelledby="call-title">
+      <div class="container callband__inner">
+        <div class="callband__text">
+          <div class="heading"><h2 id="call-title">Ein Anruf, und wir <em>kommen</em> vorbei.</h2></div>
+          <div class="lead"><p>Jörg Heller sieht sich Ihr Vorhaben vor Ort an und schickt Ihnen danach ein schriftliches Angebot.</p></div>
         </div>
-        <ul class="tiles reveal">
-          <li class="tile"><b>3 Jahre</b><span>dauert die duale Ausbildung zum Maler und Lackierer.</span></li>
-          <li class="tile"><b>Drinnen &amp; draußen</b><span>Wohnungen, Treppenhäuser, Fassaden: kein Tag ist wie der andere.</span></li>
-          <li class="tile"><b>Bis zum Meister</b><span>Gesellenbrief, Meisterschule, eigener Betrieb: Der Weg ist offen.</span></li>
-        </ul>
+        <div class="callband__actions">
+          <a class="callband__num" href="tel:+493973213024"><svg aria-hidden="true"><use href="#i-phone"/></svg>03973 213024</a>
+          <p class="callband__alt">Mobil <a href="tel:+4915111626908">0151 11626908</a></p>
+          <a class="btn btn--light" href="#kontakt">Lieber schreiben<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
       </div>
     </section>
 
@@ -438,13 +448,8 @@
       <div class="footer__grid">
         <div class="footer__brandcol">
           <a class="brand brand--footer" href="#top" aria-label="Zum Seitenanfang">
-            <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true">
-              <rect class="mark__tile" width="48" height="48" rx="10"/>
-              <path class="mark__bars" d="M14 11.5h5.2v25H14zM28.8 11.5H34v25h-5.2z"/>
-              <path class="mark__stroke" d="M9.6 25.9c4.8-1.6 12-2.6 19.9-2.4 3.4.1 6.4.5 8.9 1l.2 3.7c-2.6-.6-5.7-.9-9.1-1-7.5-.2-14.5.6-19.3 2Z"/>
-            </svg>
-            <span class="brand__word"><span class="brand__name">Heller</span><span class="brand__sub">Malermeister · Pasewalk</span></span>
-          </a>
+          <img class="brand__logo" src="assets/logo.svg?v=1" width="510" height="180" alt="Jörg Heller, Maler- und Lackierermeister">
+        </a>
           <p class="footer__claim">Maler- und Lackierermeister Jörg Heller. Malerarbeiten, Lackierungen, Tapeten, Putz und Stuck in Pasewalk und Umgebung.</p>
         </div>
         <div>
@@ -461,8 +466,8 @@
           <ul>
             <li><a href="#ablauf">Ablauf</a></li>
             <li><a href="#betrieb">Über uns</a></li>
-            <li><a href="#ausbildung">Ausbildung</a></li>
             <li><a href="#fragen">Häufige Fragen</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
           </ul>
         </div>
         <div>
@@ -485,7 +490,7 @@
 
   <p class="draft-tag" aria-label="Designentwurf von Mykhailo Sibahatov, nicht zur Veröffentlichung freigegeben"><span class="draft-tag__dot" aria-hidden="true"></span>Entwurf · © M. Sibahatov</p>
 
-  <script src="js/main.js?v=1" defer></script>
-  <script src="js/tuner.js?v=1" defer></script>
+  <script src="js/main.js?v=3" defer></script>
+  <script src="js/tuner.js?v=3" defer></script>
 </body>
 </html>

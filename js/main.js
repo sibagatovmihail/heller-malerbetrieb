@@ -52,12 +52,12 @@
     if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
   }, { passive: true });
 
-  /* ---------- navigation strip (phone sheet) ----------
+  /* ---------- navigation (phone sheet under the bar) ----------
      Scroll lock while the sheet is open: overflow:hidden alone does not stop
      iOS Safari, so the body is pinned at the current offset and the exact
      position is restored on close — instantly, no smooth scroll back. */
-  var strip = document.querySelector('.strip');
-  var toggle = document.querySelector('.strip__toggle');
+  var strip = document.querySelector('.navbar');
+  var toggle = document.querySelector('.navbar__toggle');
   var lockY = 0, locked = false;
   function lockScroll(on) {
     var b = document.body.style;
@@ -83,7 +83,7 @@
   }
   toggle.addEventListener('click', function () { setNav(strip.getAttribute('data-open') !== 'true'); });
   /* anchor links in the sheet: unlock first, then let the jump happen */
-  strip.querySelector('.strip__menu').addEventListener('click', function (e) {
+  strip.querySelector('.navbar__menu').addEventListener('click', function (e) {
     var a = e.target.closest('a');
     if (!a || strip.getAttribute('data-open') !== 'true') return;
     var hash = a.getAttribute('href');
@@ -99,6 +99,10 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && strip.getAttribute('data-open') === 'true') { setNav(false); toggle.focus(); }
   });
+  /* a tap on the dimmed page below the sheet closes it */
+  document.addEventListener('click', function (e) {
+    if (strip.getAttribute('data-open') === 'true' && !e.target.closest('.site-header')) setNav(false);
+  });
   window.matchMedia('(min-width: 64.0625rem)').addEventListener('change', function (m) {
     if (m.matches) setNav(false);
   });
@@ -106,11 +110,11 @@
   /* ---------- header hover: one tinted block glides from link to link ----------
      Wide screens with a real pointer only; it appears in place on first entry
      (no slide-in from 0) and fades out when the pointer leaves. */
-  var menu = document.querySelector('.strip__menu');
+  var menu = document.querySelector('.navbar__menu');
   var wideHover = window.matchMedia('(min-width: 64.0625rem) and (hover: hover) and (pointer: fine)');
   if (!reduceMotion) {
     var glider = document.createElement('span');
-    glider.className = 'strip__glider';
+    glider.className = 'navbar__glider';
     glider.setAttribute('aria-hidden', 'true');
     menu.prepend(glider);
     var moveTo = function (link) {
@@ -131,16 +135,16 @@
       }
     };
     var hideGlider = function () { menu.classList.remove('has-glider'); };
-    menu.querySelectorAll('.strip__link').forEach(function (link) {
+    menu.querySelectorAll('.navbar__link').forEach(function (link) {
       link.addEventListener('mouseenter', function () { showGlider(link); });
       link.addEventListener('focus', function () { showGlider(link); });
       link.addEventListener('blur', hideGlider);
     });
-    menu.querySelector('.strip__links').addEventListener('mouseleave', hideGlider);
+    menu.querySelector('.navbar__links').addEventListener('mouseleave', hideGlider);
   }
 
   /* ---------- current section: the link of the section under the header ---------- */
-  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.strip__link'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.navbar__link'));
   var sections = navLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); });
   function markCurrent() {
     var line = window.innerHeight * 0.35, current = -1;

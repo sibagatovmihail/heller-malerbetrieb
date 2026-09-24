@@ -12,11 +12,12 @@
 
   var KEY = 'heller-tune-v1';
 
+  /* from the business's own old logo: wine-red Fraktur name on terracotta and cream */
   var DEFAULTS = {
-    brand:   { h: 222, s: 55, l: 28 },   /* Ultramarin */
-    accent:  { h: 14,  s: 78, l: 52 },   /* Mennige, the red-lead primer */
+    brand:   { h: 357, s: 55, l: 24 },   /* Weinrot */
+    accent:  { h: 18,  s: 58, l: 52 },   /* Terrakotta */
     harmony: 'free',
-    ground:  'linen',
+    ground:  'accent',
     head: 'Archivo',
     body: 'Source Sans 3',
     hw: 700,
